@@ -36,8 +36,10 @@ const getDiasSinKarmaland = () => {
     let  hoyParse = (`${hoy.getFullYear()}-${hoy.getUTCMonth() + 1}-${hoy.getDate()}`)   
     let fechaInicio = new Date('2022-12-21').getTime();
     let fechaFin    = new Date(hoyParse).getTime();
-    let diff = (fechaFin - fechaInicio) / (1000*60*60*24);
-    return  diff ; 
+    let diff = (fechaFin - fechaInicio) / 86400000;
+    console.log(fechaFin -  fechaInicio)   
+    
+    return  parseInt(diff) ; 
 }
 
 function  root(content){
